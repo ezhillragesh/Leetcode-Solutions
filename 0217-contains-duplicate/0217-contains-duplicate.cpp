@@ -1,7 +1,7 @@
 class Solution {
 public:
     bool containsDuplicate(vector<int>& nums) {
-        set<int> seen;
+        unordered_set<int> seen;
         for (int num : nums) {
             if (seen.count(num) > 0) {
                 return true; 
