@@ -1,7 +1,7 @@
 class Solution {
 public:
     int romanToInt(string s) {
-        map<char, int> m;
+         unordered_map<char, int> m;
         
         m['I'] = 1;
         m['V'] = 5;
