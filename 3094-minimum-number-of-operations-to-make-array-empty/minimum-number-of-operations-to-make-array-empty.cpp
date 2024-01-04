@@ -10,8 +10,12 @@ public:
 
         for(auto it:umap){
             if(it.second<2) return -1;
+            if(it.second %3 ==0) opr+=it.second/3;
             else{
-                opr=opr+ ((it.second+2)/3);
+                if(it.second %3 ==1 || it.second % 3==2){
+                    opr+=1+it.second/3;
+                }
+               
             }
             
 
