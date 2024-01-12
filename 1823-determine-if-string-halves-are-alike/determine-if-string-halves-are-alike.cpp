@@ -1,23 +1,17 @@
 class Solution {
 public:
-    vector <char> vowels={'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'};
-    int countVowels(string s, int size){
-        int cnt=0;
-        for(int i=0;i<vowels.size();i++){
-            for(auto ch : s){
-                if(ch==vowels[i]) cnt++;
+    bool halvesAreAlike(string s) {
+        int cl=0,cr=0;
+        int size=s.size();
+        for(int i=0;i<size/2;i++){
+            if(s[i]=='a' || s[i]=='e'|| s[i]=='i'|| s[i]=='o'|| s[i]=='u'|| s[i]=='A'|| s[i]=='E'|| s[i]=='I'|| s[i]=='O'|| s[i]=='U' ){
+                cl++;
+            }
+            if(s[size-i-1]== 'a' || s[size-i-1]== 'e' ||  s[size-i-1]== 'i' ||  s[size-i-1]== 'o' ||  s[size-i-1]== 'u' ||  s[size-i-1]== 'A' ||  s[size-i-1]== 'E' ||  s[size-i-1]== 'I' ||  s[size-i-1]== 'O' ||  s[size-i-1]== 'U' ){
+                cr++;
             }
         }
-        return cnt;
-    }
-    bool halvesAreAlike(string s) {
-        
-        int size=s.size();
-        int mid=size/2;
-        int half1=countVowels(s.substr(0,mid),mid);
-        int half2=countVowels(s.substr(mid,size),mid);
-        cout<<" mid 1"<<half1<<" mid 2 : "<<half2;
-        if(half1==half2) return true;
+        if(cl==cr) return true;
         return false;
     }
 };
