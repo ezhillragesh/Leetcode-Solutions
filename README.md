@@ -4,6 +4,9 @@
 [![LeetCode Profile](https://img.shields.io/badge/LeetCode-Profile-blue)](https://leetcode.com/therealragesh)
 
 Welcome to my LeetCode solutions repository! If you've ever wondered how to tackle those tricky coding challenges on LeetCode, you're in the right place. This is where I document my daily journey of solving problems – from "How do I even begin?" to "Nailed it!"
+<p align="center">
+  <img align="center" src="https://leetcard.jacoblin.cool/therealragesh?theme=dark"/>
+</p>
 
 ## Join Me on My LeetCode Quest
 
