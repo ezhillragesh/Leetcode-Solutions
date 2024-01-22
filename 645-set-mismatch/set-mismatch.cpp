@@ -2,30 +2,16 @@ class Solution {
 public:
     vector<int> findErrorNums(vector<int>& nums) {
         int n=nums.size();
-        int exSum=n*(n+1)/2;
-        int aSum=0;
-        int dup=0;
-        int miss=0;
-        
-        unordered_map<int,int> umap;
-        
-        for(auto it:nums){
-           
-            aSum+=it;
-            umap[it]++;
+        int dup=-1,miss=-1;
+        vector <int> hash(n+1,0);
+        for(int i=0;i<n;i++){
+            hash[nums[i]]++;
         }
-       
 
-        for(auto it:umap){
-            if(it.second == 2){
-                dup=it.first;
-                break;
-            }
+        for(int i=1;i<hash.size();i++){
+            if(hash[i]==0) miss=i;
+            if(hash[i]==2) dup=i;
         }
-       miss = exSum - (aSum - dup);
-
-
-       
 
         return {dup,miss};
     }
